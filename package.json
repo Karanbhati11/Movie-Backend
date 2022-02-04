@@ -2,7 +2,7 @@
   "name": "demoapp",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/API.js",
+  "main": "backend.js",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch",
