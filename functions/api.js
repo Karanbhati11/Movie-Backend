@@ -206,8 +206,9 @@
         router.get("/page3/url=:param3", (req, res) => {
           const headers = {
             "Cache-Control": "no-cache",
-            host: "extramovies.town",
+            // host: "extramovies.town",
             Accept: "*/*",
+            "Content-Type": "video/mp4",
           };
           console.log(req.params.param3);
           res.setHeader(
@@ -224,7 +225,10 @@
           res.setHeader("Access-Control-Allow-Headers", "Content-Type");
           res.setHeader("Access-Control-Allow-Credentials", true);
           axios
-            .post(`https://suzihaza.com/api/source/${req.params.param3}`)
+            .post(
+              `https://suzihaza.com/api/source/${req.params.param3}`,
+              headers
+            )
             .then((response) => {
               const ab = response.data;
               res.send(ab);
