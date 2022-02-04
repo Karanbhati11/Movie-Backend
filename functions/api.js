@@ -224,10 +224,7 @@
           res.setHeader("Access-Control-Allow-Headers", "Content-Type");
           res.setHeader("Access-Control-Allow-Credentials", true);
           axios
-            .post(
-              `https://suzihaza.com/api/source/${req.params.param3}`,
-              headers
-            )
+            .post(`https://suzihaza.com/api/source/${req.params.param3}`)
             .then((response) => {
               const ab = response.data;
               res.send(ab);
