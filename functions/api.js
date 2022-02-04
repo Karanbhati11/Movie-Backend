@@ -205,10 +205,8 @@
         });
         router.get("/page3/url=:param3", (req, res) => {
           const headers = {
-            "Cache-Control": "no-cache",
-            // host: "extramovies.town",
             Accept: "*/*",
-            "Content-Type": "video/mp4",
+            // "Content-Type": "video/mp4",
           };
           console.log(req.params.param3);
           res.setHeader(
