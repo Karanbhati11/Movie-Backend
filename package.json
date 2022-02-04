@@ -26,5 +26,8 @@
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.7",
     "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }
