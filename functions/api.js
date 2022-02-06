@@ -203,7 +203,10 @@
           });
         });
         router.get("/page3/url=:param3", (req, res) => {
-          console.log(req.params.param3);
+          // console.log(req.params.param3);
+          const headers = {
+            Accept: "*/*",
+          };
           res.setHeader(
             "Access-Control-Allow-Origin",
             req.header("origin") ||
