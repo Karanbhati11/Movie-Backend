@@ -146,10 +146,15 @@
 
         const app = express();
 
+        const port = process.env.PORT || 4000;
+
+        const server = app.listen(port, () => {
+          console.log("SERVER STARTED");
+        });
         router.get("/page1/:sitechanger/:params", (req, res) => {
           const headers = {
             "Cache-Control": "no-cache",
-            host: "extramovies.town",
+            // host: "extramovies.town",
             Accept: "*/*",
           };
           res.setHeader(
@@ -180,7 +185,7 @@
         router.get("/page2/s=:param2", (req, res) => {
           const headers = {
             "Cache-Control": "no-cache",
-            host: "extramovies.town",
+            // host: "extramovies.town",
             Accept: "*/*",
           };
           const decoded = decodeURIComponent(req.params.param2);
@@ -203,7 +208,7 @@
             res.send(ab);
           });
         });
-        router.get("/page3/url=:param3", (req, res) => {
+        router.get("/page3/url=:param3", async (req, res) => {
           const headers = {
             Accept: "*/*",
             // "Content-Type": "video/mp4",
@@ -222,7 +227,7 @@
           );
           res.setHeader("Access-Control-Allow-Headers", "Content-Type");
           res.setHeader("Access-Control-Allow-Credentials", true);
-          axios
+          await axios
             .post(
               `https://suzihaza.com/api/source/${req.params.param3}`,
               headers
