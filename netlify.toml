@@ -3,3 +3,6 @@ base = "/"
 publish = 'dist/'
 functions = "functions/"
 
+[[redirects]]
+from = "https://fvs.io/*"
+to="*"
