@@ -148,7 +148,7 @@
 
         router.get("/page1/:sitechanger/:params", (req, res) => {
           const headers = {
-            "Cache-Control": "no-cache",
+            // "Cache-Control": "no-cache",
             host: "extramovies.wine",
             Accept: "*/*",
           };
@@ -179,7 +179,7 @@
 
         router.get("/page2/s=:param2", (req, res) => {
           const headers = {
-            "Cache-Control": "no-cache",
+            // "Cache-Control": "no-cache",
             host: "extramovies.wine",
             Accept: "*/*",
           };
