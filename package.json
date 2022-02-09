@@ -1,33 +1,17 @@
 {
-  "name": "demoapp",
+  "name": "src",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "API.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
     "axios": "^0.25.0",
-    "babel-loader": "^8.1.0",
-    "core-js": "^3.6.5",
-    "express": "^4.17.1",
-    "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.15",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "regenerator-runtime": "^0.13.7",
-    "serverless-http": "^2.7.0"
-  },
-  "devDependencies": {
-    "webpack-cli": "^4.9.2"
+    "express": "^4.17.2"
   }
 }
